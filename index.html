@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>js</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    // prob 1
+    var hello; // declareation got hosted
+    function example() {
+      var hello = "hi!";
+      console.log(hello);
+    }
+    // assginment and invocation maintiain order
+    hello = "interesting";
+    example();
+    console.log(hello);
+
+    // prob 2
+    var first_varible; // declareation got hosted
+    //and then the reads the functions
+    function firstFunc(){
+      //this will be the local variable assginment
+      first_variable = "Not anymore!!!";
+      //printing the local var
+      console.log(first_variable);
+    }
+    // we never invoke the function so it will not excute, insted, Yippe will excute
+    first_variable = "Yipee I was first!";
+    console.log(first_variable)
+
+    // prob 3
+    //declareation
+    var food;
+    //functions
+    function eat(){
+      food = "half-chicken"
+      console.log(food);
+      var food = "gone";
+      console.log(food);
+    }
+    eat();
+    food = "Checkin"
+    console.log(food);
+
+    // prob 4
+    // declareation for new_word
+    var new_word;
+    //this function will not excute because we never invoked
+    function lastFunc() {
+      new_word = "old";
+    }
+    new_word = "NEW!";
+    console.log(new_word);
+    </script>
+  </body>
+</html>
